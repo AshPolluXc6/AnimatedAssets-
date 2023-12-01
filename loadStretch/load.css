@@ -1,0 +1,145 @@
+:root {
+    --deepBlue: #00568E;
+    --darkBlue: #0476A8;
+    --oceanBlue: #009BC0;
+    --skyBlue: #2EB9D3;
+}
+
+
+.load-box {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 0;
+    margin: 50vh auto;
+    width: 300px;
+    overflow: visible;
+}
+
+.block-space {
+    width: 40px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: end;
+    flex-shrink: none;
+
+}
+
+.block1, .block2, .block3, .block4 {
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
+}
+
+.block1 {
+    animation: darker 370ms 1;
+    background-color: var(--deepBlue);
+}
+
+.block2 {
+    animation: snddarker 370ms 1;
+    animation-delay: 240.5ms;
+    background-color: var(--darkBlue);
+}
+
+.block3 {
+    animation: trddarker 370ms 1;
+    animation-delay: 481ms;
+    background-color: var(--oceanBlue);
+}
+
+.block4 {
+    animation: fthdarker 370ms 1;
+    animation-delay: 721.5ms;
+    background-color: var(--skyBlue);
+}
+
+.block1, .block2, .block3, .block4 {
+  animation-timing-function: ease-in;
+}
+
+@keyframes darker {
+    0% {
+        height: 30px;
+        border-radius: 2px;
+        width: 30px;
+    }
+    37% {
+        height: 90px;
+        border-radius: 2px;
+        width: 30px;
+    }
+    65% {
+        height: 20px;
+        border-radius: 22% 22% 22% 22% / 50% 45% 50% 45%;
+        width: 40px;
+    }
+    100% {
+        height: 30px;
+    }
+}
+
+@keyframes snddarker {
+    0% {
+        height: 30px;
+        border-radius: 2px;
+        width: 30px;
+    }
+    37% {
+        height: 90px;
+        border-radius: 2px;
+        width: 30px;
+    }
+    65% {
+        height: 20px;
+        border-radius: 22% 22% 22% 22% / 50% 45% 50% 45%;
+        width: 40px;
+    }
+    100% {
+        height: 30px;
+    }
+}
+
+@keyframes trddarker {
+    0% {
+        height: 30px;
+        border-radius: 2px;
+        width: 30px;
+    }
+    37% {
+        height: 90px;
+        border-radius: 2px;
+        width: 30px;
+    }
+    65% {
+        height: 20px;
+        border-radius: 22% 22% 22% 22% / 50% 45% 50% 45%;
+        width: 40px;
+    }
+    100% {
+        height: 30px;
+    }
+}
+
+@keyframes fthdarker {
+    0% {
+        height: 30px;
+        border-radius: 2px;
+        width: 30px;
+    }
+    37% {
+        height: 90px;
+        border-radius: 2px;
+        width: 30px;
+    }
+    65% {
+        height: 20px;
+        border-radius: 22% 22% 22% 22% / 50% 45% 50% 45%;
+        width: 40px;
+    }
+    100% {
+        height: 30px;
+    }
+}
