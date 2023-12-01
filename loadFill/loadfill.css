@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wave1-container {
+    position:relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+}
+
+.deepwave {
+    animation: ripple 40s ease-in-out infinite;
+}
+
+.midwave{
+    animation: ripple 33s ease-in-out infinite;
+
+}
+
+.shallowave {
+    animation: ripple 26s ease-in-out infinite;
+
+}
+
+.waves {
+    position: absolute;
+    top: 310px;
+}
+
+.load-count {
+    align-self: center;
+    margin-left: 200px;
+    font-weight: 500;
+    font-size: 30px;;
+    color: #0476A8;
+}
+
+/* .deepwave::after {
+    position: absolute;
+    content: url(./assets/deepwave.svg);
+    mix-blend-mode: color-dodge;
+    left: 500px;
+} */
+
+@keyframes ripple {
+    0% {
+       transform: translateX(0px);
+    }
+
+   50% {
+        transform: translateX(-3000px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
