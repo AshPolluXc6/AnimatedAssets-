@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -10,33 +11,42 @@ body{
     overflow: hidden;
     border-radius: 50%;
     display: flex;
+    margin: 0 auto;
+    transform: translateY(30%);
 }
 
 .deepwave {
-    animation: ripple 40s ease-in-out infinite;
+    animation: ripple 200s ease-out infinite;
 }
 
 .midwave{
-    animation: ripple 33s ease-in-out infinite;
+    animation: ripple 80s ease-in-out infinite;
 
 }
 
 .shallowave {
-    animation: ripple 26s ease-in-out infinite;
+    animation: ripple 120s ease-out infinite;
 
 }
 
 .waves {
     position: absolute;
-    top: 310px;
+    top: 340px;
+    z-index: 1;
 }
+
+/* .wavetide {
+    animation: tideup 3s linear 1;
+} */
 
 .load-count {
     align-self: center;
-    margin-left: 200px;
-    font-weight: 500;
-    font-size: 30px;;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 35px;;
     color: #0476A8;
+    z-index: 2;
+    animation: colorChange 1600ms linear 1 forwards;
 }
 
 /* .deepwave::after {
@@ -59,3 +69,19 @@ body{
         transform: translateX(0px);
     }
 }
+
+@keyframes colorChange{
+    0% {
+
+    }
+
+    70%, 100%{
+        color: #fff;
+    }
+}
+
+/* @media (max-width: 650px) {
+    .wave1-container {
+        transform: translateY(80%);
+    }
+} */
