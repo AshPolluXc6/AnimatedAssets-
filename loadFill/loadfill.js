@@ -19,7 +19,7 @@ let i = -1;
 
 const intervalId = setInterval(() => {
     if (i < numeros.length) {
-        count.textContent = numeros[i];
+        count.textContent = numeros[i]+'%';
         i++;
     } else {
         clearInterval(intervalId);
@@ -39,8 +39,7 @@ setTimeout(intervalId, 5000)
 function movetide() {
     let currentPosition = 340;
     const targetPosition = -100;
-    const increment = -1; // pode ajustar conforme necessário
-
+    const increment = -1; 
     function moveStep() {
         currentPosition += increment;
         wavetide.forEach(element => {
