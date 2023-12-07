@@ -1,5 +1,17 @@
 const count = document.querySelector('.load-count');
 const wavetide = document.querySelectorAll('.waves');
+const iNumber = document.getElementById('numberBox');
+
+iNumber.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var numero = document.getElementById("number").value;
+    console.log(numero);
+    this.reset();
+
+    novoNumero = numero;
+});
+
+let novoNumero;
 
 const numeros = [
     0,1,2,3,4,5,6,7,8,9,10,
@@ -18,8 +30,8 @@ let i = -1;
  
 
 const intervalId = setInterval(() => {
-    if (i < numeros.length) {
-        count.textContent = numeros[i]+'%';
+    if (i < novoNumero.length) {
+        count.textContent = novoNumero[i]+'%';
         i++;
     } else {
         clearInterval(intervalId);
