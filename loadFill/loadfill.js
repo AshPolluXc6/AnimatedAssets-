@@ -72,7 +72,7 @@ iNumber.addEventListener('submit', function(event){
 // --------------------------------------------------------------------
 function movetide() {
     let currentPosition = 340;
-    const targetPosition = -100;
+    const targetPosition = numeros;
     const increment = -1;
 
     function moveStep() {
