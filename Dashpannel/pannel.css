@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+}
+
+body {
+    
+}
+
+.canvas {
+    width: 100vh;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+footer {
+    display: flex;
+    height: 100px;;
+    background-color: red;
+    width: 100%;
+}
