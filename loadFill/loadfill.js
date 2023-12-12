@@ -2,26 +2,39 @@ const count = document.querySelector('.load-count');
 const wavetide = document.querySelectorAll('.waves');
 const iNumber = document.getElementById('numberBox');
 
+let numeros = [];
 let numero;
+
 iNumber.addEventListener('submit', function(event){
     event.preventDefault();
     numero = document.getElementById('number').value;
 
     numeros = [];
 
-    for (let index = 0; index < numero; index++) {
+    for (let index = 0; index <= numero; index++) {
         numeros.push(index);
     }
 
     console.log(numero);
     this.reset();
+
+    let i = 0;
+
+    const intervalId = setInterval(() => {
+    if (i < numeros.length) {
+        count.textContent = numeros[i]+'%';
+        i++;
+    } else {
+        clearInterval(intervalId);
+    }
+    }, 16);
 });
 
-let numeros = [];
 
 
 
-// ---------------------------------------------------------------------
+
+// -----------------------prototype---------------------------------------
 // const numeros = [
 //     0,1,2,3,4,5,6,7,8,9,10,
 //     11,12,13,14,15,16,17,18,19,20,
@@ -47,7 +60,7 @@ let numeros = [];
 //     }
 // }, 16);
 
-// setTimeout(intervalId, 5000)
+// setTimeout(intervalId, 5000);
 
 // function movetide() {
 //     wavetide.forEach(element => {
