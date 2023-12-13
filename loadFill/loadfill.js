@@ -21,20 +21,36 @@ iNumber.addEventListener('submit', function(event){
     let i = 0;
 
     const intervalId = setInterval(() => {
-    if (i < numeros.length) {
-        count.textContent = numeros[i]+'%';
-        i++;
-    } else {
-        clearInterval(intervalId);
-    }
-    }, 16);
-});
+        if (i < numeros.length) {
+                count.textContent = numeros[i]+'%';
+                i++;
 
+                const currentPosition = calculateCurrentPosition(numero) {
+                    wavemove(currentPosition);
+                };
+            } else {
+                clearInterval(intervalId);
+            };, 16});
+        });
 
+function calculateCurrentPosition(inputvalue) {
+    return 340 -(inputvalue/100) * (340-(-100));
+};
 
-
-
-// -----------------------prototype---------------------------------------
+function wavemove(currentPosition) {
+    const increment = -1;
+    currentPosition += increment;
+    wavetide.forEach(element => {
+        element.style.top = `${currentPosition}px`;
+    });
+        
+        if (currentPosition > targetPosition) {
+            setTimeout(moveStep, 1);
+        }
+    wavemove();
+}
+ setTimeout(movetide, 0);
+// -----------------------prototype----------------------------------
 // const numeros = [
 //     0,1,2,3,4,5,6,7,8,9,10,
 //     11,12,13,14,15,16,17,18,19,20,
@@ -70,23 +86,22 @@ iNumber.addEventListener('submit', function(event){
 
 // setTimeout(movetide, 2000);
 // --------------------------------------------------------------------
-function movetide() {
-    let currentPosition = 340;
-    const targetPosition = numeros;
-    const increment = -1;
+// function movetide() {
+//     const targetPosition = -100;
+//     const increment = -1;
 
-    function moveStep() {
-        currentPosition += increment;
-        wavetide.forEach(element => {
-            element.style.top = `${currentPosition}px`;
-        });
+//     function moveStep() {
+//         currentPosition += increment;
+//         wavetide.forEach(element => {
+//             element.style.top = `${currentPosition}px`;
+//         });
 
-        if (currentPosition > targetPosition) {
-            setTimeout(moveStep, 1);
-        }
-    }
+//         if (currentPosition > targetPosition) {
+//             setTimeout(moveStep, 1);
+//         }
+//     }
 
-    moveStep();
-}
+//     moveStep();
+// }
 
-setTimeout(movetide, 0);
+// setTimeout(movetide, 0);
